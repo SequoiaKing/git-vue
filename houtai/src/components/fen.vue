@@ -11,7 +11,7 @@ components: {},
 data() {
 
 return {
-
+  is:'英雄梦梦，lol'
 };
 },
 
