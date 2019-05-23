@@ -33,7 +33,7 @@
             <template slot="title">
               <Icon type="ios-analytics"></Icon>上架商品管理
             </template>
-            <MenuItem name="3-1">Option 1</MenuItem>
+            <MenuItem name="3-1">上架中</MenuItem>
             <MenuItem name="3-2">Option 2</MenuItem>
           </Submenu>
         </Menu>
