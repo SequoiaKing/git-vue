@@ -9,7 +9,7 @@
                     </MenuItem>
                     <MenuItem name="1-2" to='/shangpinguanli'>
                         <Icon type="search"></Icon>
-                        <span>商品信息管理</span>
+                        <span>商品信息</span>
                     </MenuItem>
                     <MenuItem name="1-3">
                         <Icon type="settings"></Icon>
