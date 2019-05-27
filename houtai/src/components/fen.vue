@@ -23,8 +23,8 @@ export default {
   beforeMount() {}, 
   beforeUpdate() {}, //生命周期 - 更新之前
   updated() {}, //生命周期 - 更新之后
-  beforeDestroy() {}, //生命周期 - 销毁之前
-  destroyed() {}, //生命周期 - 销毁完成
+  beforeDestroy() {},
+  destroyed() {}, 
   activated() {} 
 };
 </script>
