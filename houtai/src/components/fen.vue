@@ -20,7 +20,7 @@ export default {
 
   mounted() {},
   beforeCreate() {}, 
-  beforeMount() {}, //生命周期 - 挂载之前
+  beforeMount() {}, 
   beforeUpdate() {}, //生命周期 - 更新之前
   updated() {}, //生命周期 - 更新之后
   beforeDestroy() {}, //生命周期 - 销毁之前
