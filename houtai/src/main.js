@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
-import axios from 'axios'
-Vue.prototype.$ajax = axios
+// import axios from 'axios'
+// Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 
