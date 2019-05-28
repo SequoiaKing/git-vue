@@ -1,75 +1,134 @@
 <template>
-    <div class="layout">
-        <Layout :style="{minHeight: '100vh'}">
-            <Sider collapsible :collapsed-width="78" v-model="isCollapsed">
-                <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
-                    <MenuItem name="1-1">
-                        <Icon type="ios-navigate"></Icon>
-                        <span>商品后台</span>
-                    </MenuItem>
-                    <MenuItem name="1-2" to='/shangpinguanli'>
-                        <Icon type="search"></Icon>
-                        <span>商品信息管理</span>
-                    </MenuItem>
-                    <MenuItem name="1-3">
-                        <Icon type="settings"></Icon>
-                        <span>订单管理</span>
-                    </MenuItem>
-                </Menu>
-            </Sider>
-            <Layout>
-                    <div>
-                      <router-view></router-view>
-                    </div>
-            </Layout>
-        </Layout>
-    </div>
+  <div class="layout">
+    <Layout :style="{minHeight: '99vh'}">
+      <Sider collapsible :collapsed-width="78" v-model="isCollapsed">
+        <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-navigate"></Icon>
+              <span>用户管理</span>
+            </template>
+            <MenuItem name="1-1">Option 1</MenuItem>
+            <MenuItem name="1-2">Option 2</MenuItem>
+            <MenuItem name="1-3">Option 3</MenuItem>
+          </Submenu>
+          <Submenu name="2">
+            <template slot="title">
+              <Icon type="ios-keypad"></Icon>
+              <span>item 1</span>
+            </template>
+            <MenuItem name="2-1">Option 1</MenuItem>
+            <MenuItem name="2-2">Option 2</MenuItem>
+          </Submenu>
+          <Submenu name="3">
+            <template slot="title">
+              <Icon type="ios-analytics"></Icon>
+              <span>Item 1</span>
+            </template>
+            <MenuItem name="3-1">Option 1</MenuItem>
+            <MenuItem name="3-2">Option 2</MenuItem>
+          </Submenu>
+          <MenuItem name="4-1">
+            <Icon type="ios-navigate"></Icon>
+            <span>商品管理</span>
+          </MenuItem>
+          <MenuItem name="5-1">
+            <Icon type="ios-search"></Icon>
+            <span>订单管理</span>
+          </MenuItem>
+          <MenuItem name="6-1">
+            <Icon type="ios-settings"></Icon>
+            <span>Option 3</span>
+          </MenuItem>
+        </Menu>
+      </Sider>
+      <Layout>
+        <Header :style="{padding: 0}" class="layout-header-bar">商品管理系统</Header>
+        <Content :style="{margin: '20px', background: '#fff', minHeight: '260px'}">
+          Content
+        </Content>
+      </Layout>
+    </Layout>
+  </div>
 </template>
+
 <script>
-    export default {
-        data () {
-            return {
-                isCollapsed: false
-            };
-        },
-        computed: {
-            menuitemClasses: function () {
-                return [
-                    'menu-item',
-                    this.isCollapsed ? 'collapsed-menu' : ''
-                ]
-            }
-        }
+export default {
+  data() {
+    return {
+      isCollapsed: false
+    };
+  },
+  computed: {
+    rotateIcon() {
+      return ["menu-icon", this.isCollapsed ? "rotate-icon" : ""];
+    },
+    menuitemClasses() {
+      return ["menu-item", this.isCollapsed ? "collapsed-menu" : ""];
     }
+  },
+  methods: {
+    collapsedSider() {
+      this.$refs.side1.toggleCollapse();
+    }
+  }
+};
 </script>
 <style scoped>
-    .layout-con{
-        height: 100%;
-        width: 100%;
-    }
-    .menu-item span{
-        display: inline-block;
-        overflow: hidden;
-        width: 150px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        vertical-align: bottom;
-        transition: width .2s ease .2s;
-    }
-    .menu-item i{
-        transform: translateX(0px);
-        transition: font-size .2s ease, transform .2s ease;
-        vertical-align: middle;
-        font-size: 16px;
-    }
-    .collapsed-menu span{
-        width: 0px;
-        transition: width .2s ease;
-    }
-    .collapsed-menu i{
-        transform: translateX(5px);
-        transition: font-size .2s ease .2s, transform .2s ease .2s;
-        vertical-align: middle;
-        font-size: 22px;
-    }
+.layout {
+  border: 1px solid #d7dde4;
+  background: #f5f7f9;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sidebar {
+  height: 99vh;
+}
+.layout-header-bar {
+    background: #fff;
+    color: #000;
+    font-size: 20pt;
+    text-align: center;
+    margin: 2px 5px 0px 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.layout-logo-left {
+  width: 90%;
+  height: 30px;
+  background: #5b6270;
+  border-radius: 3px;
+  margin: 15px auto;
+}
+.menu-icon {
+  transition: all 0.3s;
+}
+.rotate-icon {
+  transform: rotate(-90deg);
+}
+.menu-item span {
+  display: inline-block;
+  overflow: hidden;
+  width: 69px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: width 0.2s ease 0.2s;
+}
+.menu-item i {
+  transform: translateX(0px);
+  transition: font-size 0.2s ease, transform 0.2s ease;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.collapsed-menu span {
+  width: 0px;
+  transition: width 0.2s ease;
+}
+.collapsed-menu i {
+  transform: translateX(5px);
+  transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+  vertical-align: middle;
+  font-size: 22px;
+}
 </style>
