@@ -191,7 +191,7 @@ export default {
           tomorrow: 1684,
           day: 2593,
           week: 2507,
-          month: 1537
+          //month: 1537
         },
         {
           name: "Name3",
