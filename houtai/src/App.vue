@@ -6,7 +6,7 @@
           <Submenu name="1">
             <template slot="title">
               <Icon type="ios-navigate"></Icon>
-              <span>用户管理</span>
+              <span>销售统计</span>
             </template>
             <MenuItem name="1-1">Option 1</MenuItem>
             <MenuItem name="1-2">Option 2</MenuItem>
@@ -15,7 +15,7 @@
           <Submenu name="2">
             <template slot="title">
               <Icon type="ios-keypad"></Icon>
-              <span>item 1</span>
+              <span>用户管理</span>
             </template>
             <MenuItem name="2-1">Option 1</MenuItem>
             <MenuItem name="2-2">Option 2</MenuItem>
@@ -23,7 +23,7 @@
           <Submenu name="3">
             <template slot="title">
               <Icon type="ios-analytics"></Icon>
-              <span>Item 1</span>
+              <span>账户管理</span>
             </template>
             <MenuItem name="3-1">Option 1</MenuItem>
             <MenuItem name="3-2">Option 2</MenuItem>
@@ -38,7 +38,7 @@
           </MenuItem>
           <MenuItem name="6-1">
             <Icon type="ios-settings"></Icon>
-            <span>Option 3</span>
+            <span>售后管理</span>
           </MenuItem>
         </Menu>
       </Sider>
@@ -75,6 +75,11 @@ export default {
 };
 </script>
 <style scoped>
+body{
+  width: 100%;
+  height: 100vh;
+  font-size: 1rem;
+}
 .layout {
   border: 1px solid #d7dde4;
   background: #f5f7f9;
