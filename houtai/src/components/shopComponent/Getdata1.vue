@@ -201,7 +201,7 @@ export default {
           signin: 8477,
           click: 1879,
           active: 16,
-          day7: 2249,
+         // day7: 2249,
           day30: 3450,
           tomorrow: 377,
           day: 1561,
