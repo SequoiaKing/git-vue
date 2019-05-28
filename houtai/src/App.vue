@@ -5,11 +5,11 @@
                 <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
                     <MenuItem name="1-1">
                         <Icon type="ios-navigate"></Icon>
-                        <span>商品后台</span>
+                        <span>商品</span>
                     </MenuItem>
                     <MenuItem name="1-2" to='/shangpinguanli'>
                         <Icon type="search"></Icon>
-                        <span>商品信息管理</span>
+                        <span>商品信息</span>
                     </MenuItem>
                     <MenuItem name="1-3">
                         <Icon type="settings"></Icon>
