@@ -30,11 +30,12 @@
           </Submenu>
           <MenuItem name="4-1">
             <Icon type="ios-navigate"></Icon>
-            <span>商品管理</span>
+            <span><router-link to="/">商品管理</router-link></span>
           </MenuItem>
           <MenuItem name="5-1">
             <Icon type="ios-search"></Icon>
-            <span>订单管理</span>
+            <span >
+              <router-link to="order">订单管理</router-link>  </span>
           </MenuItem>
           <MenuItem name="6-1">
             <Icon type="ios-settings"></Icon>
@@ -45,7 +46,7 @@
       <Layout>
         <Header :style="{padding: 0}" class="layout-header-bar">商品管理系统</Header>
         <Content :style="{margin: '20px', background: '#fff', minHeight: '260px'}">
-          Content
+          <router-view></router-view>
         </Content>
       </Layout>
     </Layout>
